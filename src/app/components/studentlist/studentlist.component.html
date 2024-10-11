@@ -1,0 +1,25 @@
+
+<style>
+  thead th {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
+</style>
+
+<div style="margin: 10px">
+  <input type="text" [(ngModel)]="studentName" placeholder="Enter name" />
+  <button style="margin: 4px; margin-top: -3px" class="btn btn-primary" (click)="addStudent()">Add Name</button>
+</div>
+
+<table border="2" style="margin: 10px">
+  <thead>
+  <tr>
+    <th>Student Names</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of studentList">
+    <td>{{ student }}</td>
+  </tr>
+  </tbody>
+</table>

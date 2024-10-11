@@ -1,0 +1,24 @@
+<style>
+  thead th {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
+</style>
+
+<div style="margin: 10px">
+  <input type="text" [(ngModel)]="movieName" placeholder="Enter movie name" />
+  <button style="margin: 4px; margin-top: -3px" class="btn btn-primary" (click)="addMovie()">Add Movie</button>
+</div>
+
+<table border="2" style="margin: 10px">
+  <thead>
+  <tr>
+    <th>Movie Names</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let movie of movieList">
+    <td>{{ movie }}</td>
+  </tr>
+  </tbody>
+</table>

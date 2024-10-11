@@ -1,0 +1,24 @@
+<style>
+  thead th {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
+</style>
+
+<div style="margin: 10px">
+  <input type="text" [(ngModel)]="budgetName" placeholder="Enter new budget" />
+  <button style="margin: 4px; margin-top: -3px" class="btn btn-primary" (click)="addBudget()">Add Budget</button>
+</div>
+
+<table border="2" style="margin: 10px">
+  <thead>
+  <tr>
+    <th>Budget List</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let budget of budgetList">
+    <td>{{ budget }}</td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+<style>
+  thead th {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
+</style>
+
+<div style="margin: 10px">
+  <input type="text" [(ngModel)]="buildingName" placeholder="Enter building" />
+  <button style="margin: 4px; margin-top: -3px" class="btn btn-primary" (click)="addBuilding()">Add Building</button>
+</div>
+
+<table border="2" style="margin: 10px">
+  <thead>
+  <tr>
+    <th>Buildings</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let building of buildingList">
+    <td>{{ building }}</td>
+  </tr>
+  </tbody>
+</table>

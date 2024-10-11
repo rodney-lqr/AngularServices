@@ -1,0 +1,24 @@
+<style>
+  thead th {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
+</style>
+
+<div style="margin: 10px">
+  <input type="text" [(ngModel)]="mealPlanName" placeholder="Enter meal" />
+  <button style="margin: 4px; margin-top: -3px" class="btn btn-primary" (click)="addMealPlan()">Add Meal</button>
+</div>
+
+<table border="2" style="margin: 10px">
+  <thead>
+  <tr>
+    <th>Meal Plans</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let meal of mealPlanList">
+    <td>{{ meal }}</td>
+  </tr>
+  </tbody>
+</table>

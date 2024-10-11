@@ -1,0 +1,24 @@
+<style>
+  thead th {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+  }
+</style>
+
+<div style="margin: 10px">
+  <input type="text" [(ngModel)]="contactName" placeholder="Enter name" />
+  <button style="margin: 4px; margin-top: -3px" class="btn btn-primary" (click)="addContact()">Add Name</button>
+</div>
+
+<table border="2" style="margin: 10px">
+  <thead>
+  <tr>
+    <th>Name of Contacts</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let name of contactList">
+    <td>{{ name }}</td>
+  </tr>
+  </tbody>
+</table>
